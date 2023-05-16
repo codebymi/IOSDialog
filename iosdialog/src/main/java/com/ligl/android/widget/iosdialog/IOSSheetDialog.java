@@ -88,7 +88,7 @@ public class IOSSheetDialog extends Dialog implements DialogInterface {
             
             TextView tvTitle = (TextView) sheetView.findViewById(R.id.title);
             LinearLayout message_layout = (LinearLayout) sheetView.findViewById(R.id.message_layout);
-            Button btn_cancel = (Button) sheetView.findViewById(R.id.btn_cancel);
+            TextView btn_cancel = (TextView) sheetView.findViewById(R.id.btn_cancel);
             
             // 设置标题
             // fix #1, if title is null, set tvTitle visibility GONE,and set first item background as top
@@ -101,7 +101,7 @@ public class IOSSheetDialog extends Dialog implements DialogInterface {
             for (int i = 0, len = mItems.length; i < len; i++) {
                 
                 View itemView = inflater.inflate(R.layout.ios_sheet_item, message_layout, false);
-                Button btnItem = (Button) itemView.findViewById(R.id.btn_item);
+                TextView btnItem = (TextView) itemView.findViewById(R.id.btn_item);
                 btnItem.setText(mItems[i].name);
                 btnItem.setTextColor(mItems[i].color);
                 // fix #1, if title is null, set tvTitle visibility GONE,and set first item background as top
@@ -110,7 +110,9 @@ public class IOSSheetDialog extends Dialog implements DialogInterface {
                     line.setVisibility(View.GONE);
                     btnItem.setBackgroundResource(R.drawable.iossheet_top_btn_selector);
                 }
-                if(i == mItems.length - 1) {
+                if(mItems.length == 1){
+                    btnItem.setBackgroundResource(R.drawable.iossheet_sigle_btn_normal);
+                }else if(i == mItems.length - 1) {
                     btnItem.setBackgroundResource(R.drawable.iossheet_bottom_btn_selector);
                 }
                 final int itemIndex = i;

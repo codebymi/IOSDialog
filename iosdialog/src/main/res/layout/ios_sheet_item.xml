@@ -10,11 +10,12 @@
         android:layout_height="1dp"
         android:background="@color/ios_grey" />
 
-    <Button
+    <TextView
         android:id="@+id/btn_item"
         android:layout_width="match_parent"
-        android:layout_height="43dp"
+        android:layout_height="@dimen/ios_sheet_dialog_item_height"
         android:background="@drawable/iossheet_middle_btn_selector"
+        android:fontFamily="@font/sf_pro_display_medium"
         android:gravity="center"
         android:singleLine="true" />
 

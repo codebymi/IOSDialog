@@ -111,9 +111,8 @@ public class MainActivity extends Activity {
         btn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                IOSSheetDialog.SheetItem[] items = new IOSSheetDialog.SheetItem[2];
+                IOSSheetDialog.SheetItem[] items = new IOSSheetDialog.SheetItem[1];
                 items[0] = new IOSSheetDialog.SheetItem("item1", IOSSheetDialog.SheetItem.RED);
-                items[1] = new IOSSheetDialog.SheetItem("item2", IOSSheetDialog.SheetItem.BLUE);
                 IOSSheetDialog dialog2 = new IOSSheetDialog.Builder(context)
                         .setData(items, null).show();
             }
