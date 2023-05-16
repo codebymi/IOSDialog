@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 32
     // buildToolsVersion "25.0.2"
 
     defaultConfig {
         applicationId "com.ligl.example.iosdialog"
-        minSdkVersion 9
-        targetSdkVersion 25
+        minSdkVersion 24
+        targetSdkVersion 32
         versionCode 1
         versionName "1.0"
 
@@ -23,10 +23,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile project(path: ':iosdialog')
-    testCompile 'junit:junit:4.12'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':iosdialog')
 }
