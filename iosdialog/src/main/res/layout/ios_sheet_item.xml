@@ -17,6 +17,8 @@
         android:background="@drawable/iossheet_middle_btn_selector"
         android:fontFamily="@font/sf_pro_display_medium"
         android:gravity="center"
-        android:singleLine="true" />
+        android:ellipsize="end"
+        android:textSize="15sp"
+        android:maxLines="1" />
 
 </LinearLayout>

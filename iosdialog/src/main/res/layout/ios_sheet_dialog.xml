@@ -13,6 +13,7 @@
         android:background="@drawable/iossheet_top_btn_normal"
         android:gravity="center"
         android:textColor="@color/ios_grey"
+        android:textSize="15sp"
         android:fontFamily="@font/sf_pro_display_semi_bold"
         android:singleLine="true" />
     
@@ -46,10 +47,11 @@
         android:layout_marginBottom="15dp"
         android:background="@drawable/iossheet_sigle_btn_selector"
         android:gravity="center"
-        android:singleLine="true"
+        android:maxLines="1"
+        android:ellipsize="end"
         android:fontFamily="@font/sf_pro_display_semi_bold"
         android:text="@string/iossheet_cancel"
         android:textColor="@color/ios_blue"
-        android:textSize="14sp" />
+        android:textSize="15sp" />
 
 </LinearLayout>
